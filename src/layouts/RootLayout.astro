@@ -1,5 +1,8 @@
 ---
 import "@fontsource/Inter";
+
+import Header from "@components/Header/Header";
+import Footer from "@components/Footer/Footer";
 export interface Props {
   title?: string;
 }
@@ -17,20 +20,41 @@ const { title = "Portfolio" } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <Header client:load />
+    <main class="h-[2000px] p-6">
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>
 <style is:global>
-  :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    z-index: 5;
   }
   html {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Inter", sans-serif;
-    background-color: #f6f6f6;
   }
   code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
       monospace;
+  }
+  body {
+    min-height: 100vh;
+    position: relative;
+    background-color: #12151d;
+    background-image: url("/images/main-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
   }
 </style>
