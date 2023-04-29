@@ -1,9 +1,14 @@
 interface Props {
-  children: React.ReactElement;
+  children: any;
+  className?: string | undefined;
 }
 
-function Box({ children, ...rest }: Props) {
-  return <div {...rest}>{children}</div>;
+function Box({ children, className, ...rest }: Props) {
+  return (
+    <div className={className} {...rest}>
+      {children}
+    </div>
+  );
 }
 
 export default Box;
