@@ -27,6 +27,7 @@ module.exports = {
       blue: "0EA5E9",
       blurry: {
         1: "rgba(255, 255, 255, 0.02)",
+        2: "rgba(255, 255, 255, 0.1)",
       },
       "pink-gradient": {
         1: "#8236D4",
