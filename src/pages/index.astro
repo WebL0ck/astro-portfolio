@@ -1,5 +1,22 @@
 ---
 import RootLayout from "../layouts/RootLayout.astro";
+import Box from "@components/shared/Box/Box";
+import Typography from "@components/shared/Typography/Typography";
+import GradientTypography from "@components/shared/Typography/GradientTypography";
+import Button from "@components/shared/Button/Button";
 ---
 
-<RootLayout>lol</RootLayout>
+<RootLayout>
+  <Typography className="mt-32 text-center text-5xl font-bold">
+    Hi, my name is Anton and i am a <br />
+    <GradientTypography>full-stack</GradientTypography> developer
+  </Typography>
+  <Typography className="text-1xl mt-[20px] text-center font-medium text-gray-2">
+    I have over 3 years of production experience, and
+    <br /> primary focused on web3 technologies
+  </Typography>
+  <Box className="flex justify-center mt-[30px] gap-5">
+    <Button>Projects</Button>
+    <Button>My blog</Button>
+  </Box>
+</RootLayout>
