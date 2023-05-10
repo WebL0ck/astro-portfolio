@@ -13,17 +13,36 @@ function Header() {
   const { scrollY } = useWindowScrollPosition();
 
   const headerLinkStyles =
-    " rounded bg-white bg-opacity-0 px-4 py-1 text-gray-1 transition-colors hover:bg-opacity-10 hover:text-white";
+    " rounded bg-white bg-opacity-0 px-4 py-1 transition-colors hover:bg-opacity-10 hover:text-white";
+
+  const getHeaderColor = () => {
+    if (scrollY >= 5000) {
+      return "";
+    } else if (scrollY >= 1200) {
+      return "shadow-battlepro transition duration-500 ease";
+    } else if (scrollY >= 400) {
+      return "shadow-sociogram transition duration-500 ease";
+    } else {
+      return "shadow-none transition duration-500 ease";
+    }
+  };
 
   return (
     <header
       className={classNames({
-        "sticky top-0 flex h-16 w-full items-center justify-between px-6 backdrop-blur-lg": true,
-        "border-opacity-1 border-b border-solid  border-b-gray-8 transition duration-300 ease bg-blurry-1":
-          scrollY > 70,
-        "border-b border-solid border-b-gray-8 border-opacity-0 transition duration-300 ease": scrollY <= 70,
+        "sticky top-0 flex h-16 w-full items-center justify-between px-6 backdrop-blur-sm z-50": true,
+        "border-opacity-1 border-b border-solid  border-b-gray-8 transition duration-300 ease bg-blurry-1": false,
+        "border-b border-solid border-b-gray-8 border-opacity-0 transition duration-300 ease": true,
       })}
     >
+      <Box
+        className={classNames(
+          {
+            "absolute w-full": true,
+          },
+          getHeaderColor()
+        )}
+      />
       <Link href={ROUTES.HOME}>
         <Image src="icons/logo.svg" alt="logo" width={55} height={29} />
       </Link>
