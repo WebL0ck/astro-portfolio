@@ -1,7 +1,7 @@
 interface Props {
   src?: string | undefined;
-  height: number;
-  width: number;
+  height?: number;
+  width?: number;
   alt: string | undefined;
   className?: string | undefined;
 }
