@@ -21,13 +21,14 @@ module.exports = {
         8: "#454545",
       },
       black: {
-        1: "12151D",
+        1: "#12151D",
         2: "#131620",
       },
-      blue: "0EA5E9",
+      blue: "#0EA5E9",
       blurry: {
         1: "rgba(255, 255, 255, 0.02)",
         2: "rgba(255, 255, 255, 0.1)",
+        3: "rgba(255, 255, 255, 4%)",
       },
       "pink-gradient": {
         1: "#8236D4",
@@ -39,11 +40,17 @@ module.exports = {
       },
       "orange-gradient": {
         1: "#EC6155",
-        2: "#F1BF50",
+        2: "#F0BD50",
       },
       transparent: "transparent",
     },
     extend: {
+      boxShadow: {
+        sociogram: "-5px -61px 168px 73px rgba(90,93,246,0.7)",
+        battlepro: "-5px -61px 168px 73px rgba(29,161,218,0.7)",
+        "button-active": "0px 4px 30px 3px rgba(236, 96, 84, 0.5)",
+        button: "0px 4px 20px 5px rgba(236, 96, 84, 0.2)",
+      },
       backgroundImage: {
         "main-bg": "url('/images/main-bg.jpg')",
       },
