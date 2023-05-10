@@ -2,12 +2,13 @@ import Box from "@components/shared/Box/Box";
 import Typography from "@components/shared/Typography/Typography";
 import Image from "@components/shared/Image/Image";
 import Button from "@components/shared/Button/Button";
+import GradientTypography from "@components/shared/Typography/GradientTypography";
 
 import { socialIcons } from "./footer.constants";
 
 function Footer() {
   return (
-    <footer className="h-[200px] p-[30px] border-t border-solid  border-t-gray-8 bg-black-2 flex flex-col justify-between">
+    <footer className="h-[200px] p-[30px] mt-72 border-t border-solid  border-t-gray-8 bg-black-2 flex flex-col justify-between">
       <Box className="flex items-center gap-3">
         <Image src="icons/logo.svg" alt="logo" width={73} height={38} />
         <Typography className="text-gray-2">-</Typography>
@@ -16,8 +17,8 @@ function Footer() {
         </Typography>
       </Box>
       <Box className="flex gap-4">
-        <Button className="h-[45px] w-[140px]" withHover={false}>
-          Resume
+        <Button className="h-[45px] w-[140px] bg-black-2" withHover={false} withBorder={false} withGradient={true}>
+          <GradientTypography color="orange">Resume</GradientTypography>
         </Button>
         {socialIcons.map((socialIcon) => (
           <Button
