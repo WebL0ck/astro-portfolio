@@ -1,5 +1,40 @@
 ---
 import RootLayout from "../layouts/RootLayout.astro";
+import Typography from "@components/shared/Typography/Typography";
+import Box from "@components/shared/Box/Box";
+import SkillItem from "@components/Items/SkillItem/SkillItem";
+
+import { SKILLS } from "../api/skills/skills.api";
 ---
 
-<RootLayout>skills</RootLayout>
+<RootLayout>
+  <Typography className="font-bold text-2xl">Front-end:</Typography>
+  <Box className="flex flex-wrap mt-3 gap-4">
+    {
+      SKILLS.FRONT_END.map((skillItem) => (
+        <SkillItem
+          href={skillItem.href}
+          src={skillItem.icon || ""}
+          title={skillItem.title}
+          description={skillItem.description}
+          client:load
+        />
+      ))
+    }
+  </Box>
+  <!-- <Typography className="font-bold text-2xl">Back-end:</Typography> -->
+  <Typography className="font-bold text-2xl mt-14">Other:</Typography>
+  <Box className="flex flex-wrap mt-3 gap-4">
+    {
+      SKILLS.OTHER.map((skillItem) => (
+        <SkillItem
+          href={skillItem.href}
+          src={skillItem.icon || ""}
+          title={skillItem.title}
+          description={skillItem.description}
+          client:load
+        />
+      ))
+    }
+  </Box>
+</RootLayout>
