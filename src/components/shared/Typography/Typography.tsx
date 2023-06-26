@@ -1,4 +1,6 @@
-interface Props {
+import type { HTMLProps } from "react";
+
+interface Props extends HTMLProps<HTMLParagraphElement> {
   children?: any;
   className?: string | undefined;
   element?: "span" | "p";

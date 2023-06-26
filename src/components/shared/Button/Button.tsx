@@ -21,8 +21,6 @@ function Button({
   withTransition = true,
   onClick,
 }: Props) {
-  console.log("🚀 ~ Button ~ withHover:", withHover);
-
   const renderButton = () => (
     <button
       className={classNames(

@@ -1,6 +1,7 @@
 interface Props {
   children?: any;
   className?: string | undefined;
+  onClick?: () => void;
 }
 
 function Box({ children, className, ...rest }: Props) {
