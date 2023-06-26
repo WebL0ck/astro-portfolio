@@ -2,5 +2,11 @@ export const ROUTES = {
   HOME: "/",
   WORK: "/work",
   SKILLS: "/skills",
-  RESUME: "/resume",
+  ABOUT: "/about",
+};
+
+export const WORK_ROUTES = {
+  SOCIOGRAM: `${ROUTES.WORK}/sociogram`,
+  BATTLEPRO: `${ROUTES.WORK}/battlepro`,
+  MYEYEDR: `${ROUTES.WORK}/myeyedr`,
 };

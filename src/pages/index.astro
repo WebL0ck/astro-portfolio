@@ -7,6 +7,9 @@ import Button from "@components/shared/Button/Button";
 import ApplicationWrapper from "@components/shared/ApplicationWrapper/ApplicationWrapper";
 import DeviceWrapper from "@components/shared/DeviceWrapper/DeviceWrapper";
 import Image from "@components/shared/Image/Image";
+import Link from "@components/shared/Link/Link";
+
+import { WORK_ROUTES } from "../routes/routes.constants";
 ---
 
 <RootLayout>
@@ -19,15 +22,17 @@ import Image from "@components/shared/Image/Image";
     <br /> primary focused on web3 technologies
   </Typography>
   <Box className="flex justify-center mt-[30px] gap-5">
-    <Button>Projects</Button>
-    <Button>My blog</Button>
+    <Button>Work cases</Button>
+    <Button>About me</Button>
   </Box>
   <Box className="mt-60 flex justify-between">
     <Box className="h-auto flex gap-5 flex-col justify-center items-center">
-      <Typography className="text-3xl font-bold flex gap-2">
-        <Image src="/icons/sociogram_logo.svg" alt="sociogram logo" width={27} height={40} />
-        Sociogram
-      </Typography>
+      <Link href={WORK_ROUTES.SOCIOGRAM}>
+        <Typography className="text-3xl font-bold flex gap-2">
+          <Image src="/icons/sociogram_logo.svg" alt="sociogram logo" width={27} height={40} />
+          Sociogram
+        </Typography>
+      </Link>
       <ApplicationWrapper className="w-[500px]" wrapperClassName="flex flex-col gap-3">
         <Box>
           <Box className="flex gap-3">
@@ -92,9 +97,11 @@ import Image from "@components/shared/Image/Image";
       </DeviceWrapper>
     </Box>
     <Box className="h-auto flex gap-5 flex-col justify-center items-center">
-      <Typography className="text-3xl font-bold flex gap-2">
-        <Image src="/icons/battlepro_logo.png" alt="battlepro logo" width={186} height={23} />
-      </Typography>
+      <Link href={WORK_ROUTES.BATTLEPRO}>
+        <Typography className="text-3xl font-bold flex gap-2">
+          <Image src="/icons/battlepro_logo.png" alt="battlepro logo" width={186} height={23} />
+        </Typography>
+      </Link>
       <ApplicationWrapper className="w-[500px]" wrapperClassName="flex flex-col gap-3">
         <Box>
           <Box className="flex gap-3">
@@ -115,6 +122,64 @@ import Image from "@components/shared/Image/Image";
           bro. Sound well but with big fat cock should be more enjoyable!
         </Typography>
       </ApplicationWrapper>
+    </Box>
+  </Box>
+  <Box className="mt-72 flex justify-between">
+    <Box className="h-auto flex gap-5 flex-col justify-center items-center">
+      <Link href={WORK_ROUTES.MYEYEDR}>
+        <Typography className="text-3xl font-bold flex gap-2">
+          <Image src="/icons/myeyedr-logo.svg" alt="myeyedr logo" />
+        </Typography>
+      </Link>
+      <ApplicationWrapper className="w-[500px]" wrapperClassName="flex flex-col gap-3">
+        <Box>
+          <Box className="flex gap-3">
+            <Typography className="text-gray-1 w-[63px] text-sm">stack:</Typography>
+            <Box className="flex gap-2">
+              <Typography className="text-blue cursor-pointer text-sm">#react</Typography>
+              <Typography className="text-blue cursor-pointer text-sm">#redux</Typography>
+              <Typography className="text-blue cursor-pointer text-sm">#redux-saga</Typography>
+            </Box>
+          </Box>
+          <Box className="flex gap-3">
+            <Typography className="text-gray-1 w-[63px] text-sm">position:</Typography>
+            <Typography className="text-sm">Junior Front-end developer</Typography>
+          </Box>
+        </Box>
+        <Typography className="text-sm font-light">
+          A blazing fast and secure wallet to track your crypto actives. Easy buy and sell crypto as well. Suck my dick
+          bro. Sound well but with big fat cock should be more enjoyable!
+        </Typography>
+      </ApplicationWrapper>
+    </Box>
+    <Box className="gap-5 relative flex justify-between">
+      <DeviceWrapper
+        className="w-[270px] h-[535px] rounded-[48px] hover:z-10 hover:scale-[1.03] transition duration-300 ease"
+      >
+        <Image
+          src="/images/myeyedr-mobile-1.png"
+          alt="sociogram website preview"
+          className="w-full h-full object-cover rounded-[36px]"
+        />
+      </DeviceWrapper>
+      <DeviceWrapper
+        className="mt-10 w-[270px] h-[535px] rounded-[48px] hover:z-10 hover:scale-[1.03] transition duration-300 ease"
+      >
+        <Image
+          src="/images/myeyedr-mobile.png"
+          alt="sociogram website preview"
+          className="w-full h-full object-cover rounded-[36px]"
+        />
+      </DeviceWrapper>
+      <DeviceWrapper
+        className="mt-20 w-[270px] h-[535px] rounded-[48px] hover:z-10 hover:scale-[1.03] transition duration-300 ease"
+      >
+        <Image
+          src="/images/myeyedr-mobile-2.png"
+          alt="sociogram website preview"
+          className="w-full h-full object-cover rounded-[36px]"
+        />
+      </DeviceWrapper>
     </Box>
   </Box>
 </RootLayout>
