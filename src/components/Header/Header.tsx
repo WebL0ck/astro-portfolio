@@ -13,7 +13,6 @@ interface Props {
 }
 
 function Header({ activePage }: Props) {
-  console.log("🚀 ~ Header ~ activePage:", activePage);
   const { scrollY } = useWindowScrollPosition();
 
   const headerLinkStyles =
