@@ -1,12 +1,13 @@
 interface Props {
   children?: any;
-  className?: string | undefined;
+  className?: string;
+  style?: React.CSSProperties;
   onClick?: () => void;
 }
 
-function Box({ children, className, ...rest }: Props) {
+function Box({ children, className, style, ...rest }: Props) {
   return (
-    <div className={className} {...rest}>
+    <div className={className} style={style} {...rest}>
       {children}
     </div>
   );

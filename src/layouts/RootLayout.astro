@@ -24,7 +24,7 @@ const url = Astro.url;
   </head>
   <body>
     <Header activePage={url.pathname} client:load />
-    <main class="p-6">
+    <main class="p-6 pt-0">
       <slot />
     </main>
     <Footer />

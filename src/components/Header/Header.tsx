@@ -38,7 +38,7 @@ function Header({ activePage }: Props) {
   return (
     <header
       className={classNames({
-        "sticky top-0 flex h-16 w-full items-center justify-between px-6 backdrop-blur-sm z-50":
+        "fixed top-0 flex h-16 w-full items-center justify-between px-6 backdrop-blur-sm z-50":
           true,
         "border-opacity-1 border-b border-solid  border-b-gray-8 transition duration-300 ease bg-blurry-1":
           false,
