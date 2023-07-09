@@ -9,6 +9,7 @@ export const WORKS = {
     position: "Middle Front-end developer",
     images: {
       mobile: "/images/sociogram-mobile.png",
+      logo: "/icons/sociogram_logo.svg",
       desktop: "/images/sociogram-desktop.png",
     },
   },
