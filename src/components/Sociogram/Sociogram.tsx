@@ -8,9 +8,13 @@ import Link from "@components/shared/Link/Link";
 import { WORK_ROUTES } from "../../routes/routes.constants";
 import { WORKS } from "../../api/works/works.api";
 
-function Sociogram() {
+interface ISociogramProps {
+  style?: React.CSSProperties;
+}
+
+function Sociogram({ style }: ISociogramProps) {
   return (
-    <Box className="mt-60 flex justify-between">
+    <Box className="mt-60 flex justify-between" style={style}>
       <Box className="h-auto flex gap-5 flex-col justify-center items-center">
         <Link href={WORK_ROUTES.SOCIOGRAM}>
           <Typography className="text-3xl font-bold flex gap-2">
