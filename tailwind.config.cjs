@@ -48,7 +48,7 @@ module.exports = {
       boxShadow: {
         sociogram: "-5px -61px 168px 73px rgba(90,93,246,0.7)",
         battlepro: "-5px -61px 168px 73px rgba(29,161,218,0.7)",
-        myeyedr: "-5px -61px 168px 73px rgba(7,22,201, 0.7)",
+        myeyedr: "-5px -61px 168px 73px rgba(0,127,225, 0.9)",
         "button-active": "0px 4px 30px 3px rgba(236, 96, 84, 0.5)",
         button: "0px 4px 20px 5px rgba(236, 96, 84, 0.2)",
       },
